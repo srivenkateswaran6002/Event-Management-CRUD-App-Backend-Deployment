@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-m^yqgj!14(vmufw&&g)c_+c^8j7)3r)0r4!zryd*n*&trwvj_u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['your-render-app.onrender.com']
 
 
 # Application definition
@@ -128,5 +128,5 @@ STATIC_URL = 'static/'
 
 #To allow frontend to access backend
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Next.js dev server url
+    "https://your-frontend.vercel.app",
 ]
