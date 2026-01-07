@@ -17,6 +17,7 @@ DEBUG = config('DEBUG', default=1, cast=int)
 ALLOWED_HOSTS = [config('RENDER_EXTERNAL_HOSTNAME', default='localhost')]
 
 # Application definition
+import os
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -93,3 +94,6 @@ STATIC_URL = 'static/'
 CORS_ALLOWED_ORIGINS = [
     config('FRONTEND_URL', default='http://localhost:3000'),
 ]
+
+# This is the folder where collectstatic will put all static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
