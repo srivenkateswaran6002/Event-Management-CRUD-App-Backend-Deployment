@@ -4,6 +4,7 @@ from .serializers import EventSerializer
 
 class EventViewSet(ModelViewSet):
     serializer_class = EventSerializer
+    permission_classes = [AllowAny]
 
     def get_queryset(self):
         queryset = Event.objects.all().order_by('-created_at')
